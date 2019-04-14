@@ -1,0 +1,31 @@
+.sh-auth {
+
+  &__container {
+    height: 100%;
+    padding: 80px 64px;
+    box-sizing: border-box;
+    background: #6c6dfbdd
+  }
+
+  &__card {
+    height: 100%;
+    padding: 0;
+    max-width: 780px;
+    max-height: 585px;
+    margin: auto;
+    border-radius: 15px !important;
+  }
+
+  &__welcome-section {
+    height: 100%;
+    background: #736efb;
+    color: #fff;
+    padding: 24px;
+    border-radius: 15px 0 0 15px
+  }
+
+  &__login-form {
+    padding: 32px
+  }
+
+}

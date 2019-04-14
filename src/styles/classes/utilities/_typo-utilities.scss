@@ -1,0 +1,89 @@
+@mixin sh-base-typography-utilities($config, $selector: '.sh-typography') {
+
+  .sh-h1, .sh-headline, #{$selector} h1 {
+    @include mat-typography-level-to-styles($config, headline);
+    //margin: 0 0 16px;
+  }
+
+  .sh-h2, .sh-title, #{$selector} h2 {
+    @include mat-typography-level-to-styles($config, title);
+    //margin: 0 0 16px;
+  }
+
+  .sh-h3, .sh-subheading-2, #{$selector} h3 {
+    @include mat-typography-level-to-styles($config, subheading-2);
+    //margin: 0 0 16px;
+  }
+
+  .sh-h4, .sh-subheading-1, #{$selector} h4 {
+    @include mat-typography-level-to-styles($config, subheading-1);
+    //margin: 0 0 16px;
+  }
+
+  // Note: the spec doesn't have anything that would correspond to h5 and h6, but we add these for
+  // consistency. The font sizes come from the Chrome user agent styles which have h5 at 0.83em
+  // and h6 at 0.67em.
+  .sh-h5, #{$selector} h5 {
+    @include mat-typography-font-shorthand(
+        mat-font-size($config, body-1) * 0.83,
+        mat-font-weight($config, body-1),
+        mat-line-height($config, body-1),
+        mat-font-family($config, body-1)
+    );
+
+    //margin: 0 0 12px;
+  }
+
+  .sh-h6, #{$selector} h6 {
+    @include mat-typography-font-shorthand(
+        mat-font-size($config, body-1) * 0.67,
+        mat-font-weight($config, body-1),
+        mat-line-height($config, body-1),
+        mat-font-family($config, body-1)
+    );
+
+    //margin: 0 0 12px;
+  }
+
+  .sh-body-strong, .sh-body-2 {
+    @include mat-typography-level-to-styles($config, body-2);
+  }
+
+  .sh-body, .sh-body-1, #{$selector} {
+    @include mat-typography-level-to-styles($config, body-1);
+
+    p {
+      //margin: 0 0 12px;
+    }
+  }
+
+  .sh-small, .sh-caption {
+    @include mat-typography-level-to-styles($config, caption);
+  }
+
+  // Note: The spec doesn't mention letter spacing. The value comes from
+  // eyeballing it until it looked exactly like the spec examples.
+  .sh-display-4, #{$selector} .sh-display-4 {
+    @include mat-typography-level-to-styles($config, display-4);
+    //margin: 0 0 56px;
+    //letter-spacing: -0.05em;
+  }
+
+  .sh-display-3, #{$selector} .sh-display-3 {
+    @include mat-typography-level-to-styles($config, display-3);
+    //margin: 0 0 64px;
+    //letter-spacing: -0.02em;
+  }
+
+  .sh-display-2, #{$selector} .sh-display-2 {
+    @include mat-typography-level-to-styles($config, display-2);
+    //margin: 0 0 64px;
+    //letter-spacing: -0.005em;
+  }
+
+  .sh-display-1, #{$selector} .sh-display-1 {
+    @include mat-typography-level-to-styles($config, display-1);
+    //margin: 0 0 64px;
+  }
+
+}

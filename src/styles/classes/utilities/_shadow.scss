@@ -1,0 +1,19 @@
+.sh-u {
+  &-no-shadow {
+    box-shadow: none !important;
+  }
+
+  @each $key, $val in $breakpoints {
+    @include layout-bp($key) {
+      &-#{$key}-no-shadow {
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  @for $i from 1 through 10 {
+    &-shadow-#{$i} {
+      @include mat-elevation($i);
+    }
+  }
+}

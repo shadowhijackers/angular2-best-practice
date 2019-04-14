@@ -1,0 +1,40 @@
+.sh-u {
+
+  $this: &;
+
+  &-row::after {
+    content: "";
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 12 {
+    #{$this}-col-#{$i} {
+      flex: 0 0 percentage($i/12);
+      max-width: percentage($i/12);
+    }
+  }
+
+  @each $key, $val in $breakpoints {
+    @include layout-bp($key) {
+      @for $i from 1 through 12 {
+        #{$this}-col-#{$key}-#{$i} {
+          flex: 0 0 percentage($i/12);
+          max-width: percentage($i/12*100);
+        }
+      }
+    }
+  }
+
+}
+
+[class*="u-col-"] {
+  float: left;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+

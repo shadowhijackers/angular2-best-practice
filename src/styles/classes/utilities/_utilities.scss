@@ -1,0 +1,127 @@
+
+.sh-u {
+
+  $this: &;
+
+  &-fab-transparent {
+    background-color: transparent !important;
+
+    mat-icon {
+      color: white !important;
+    }
+  }
+
+  &-border-none {
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  &-rounded-border-none {
+    @extend #{$this}-border-none;
+
+    &:hover {
+      border-radius: 50% !important;
+    }
+  }
+
+  &-flex {
+    display: flex;
+  }
+
+  &-flex-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-flex-row-direction {
+    flex-direction: row;
+  }
+
+  &-flex-coloumn-direction {
+    flex-direction: column;
+  }
+
+  &-vertical-align-middle {
+    vertical-align: middle;
+  }
+
+  &-rounded {
+    border-radius: 4px;
+  }
+
+  &-rounded-2 {
+    border-radius: 8px;
+  }
+
+  &-rounded-3 {
+    border-radius: 16px;
+  }
+
+  &-rounded-circle {
+    border-radius: 50%;
+  }
+
+  @each $align in left,
+  right,
+  center {
+    &-text-align-#{$align} {
+      text-align: $align;
+    }
+  }
+  @each $key,
+  $size in (sm: small, md: medium, lg:large) {
+    &-font-size-#{$key} {
+      font-size: $size;
+    }
+  }
+  @each $key,
+  $alignProperty in $alignPropertiesMap {
+    &-no-#{$alignProperty} {
+      #{$alignProperty}: 0 !important;
+    }
+  }
+
+  &-no-padding {
+    padding: 0;
+  }
+
+  &-scroll {
+    width: 100%;
+    overflow: auto;
+  }
+
+  &-scroll-x {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  &-scroll-y {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &-text-overflow-ellipse {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &-no-scroll-y {
+    overflow-y: hidden !important;
+  }
+
+  &-no-scroll-x {
+    overflow-y: hidden;
+  }
+
+  &-no-scroll {
+    overflow: hidden;
+  }
+
+  &-backdrop {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+}

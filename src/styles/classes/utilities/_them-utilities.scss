@@ -1,0 +1,147 @@
+@mixin theme-utilities($theme) {
+
+  $foreground-palate: map-get($theme, foreground);
+  $background-palate: map-get($theme, background);
+  $primary-palate: map-get($theme, primary);
+  $accent-palate: map-get($theme, accent);
+  $warn-palate: map-get($theme, warn);
+
+  $primary: mat-color($primary-palate);
+  $primary-light: mat-color($primary-palate, 200);
+  $primary-variant: mat-color($primary-palate, 900);
+  $accent: mat-color($accent-palate);
+  $accent-variant: mat-color($accent-palate, 900);
+  $border-color: mat-color($foreground-palate, divider);
+  $txt-color: mat-color($foreground-palate, text);
+  $txt-variant: mat-color($foreground-palate, secondary-text);
+  $inactive-link-color: mat-color($foreground-palate, disabled);
+  $warn: mat-color($warn-palate);
+
+
+  .sh-theme {
+
+    $this: &;
+
+    &-primary-bg {
+      background: $primary;
+    }
+
+    &-primary-variant-bg {
+      background: $primary-variant;
+    }
+
+    &-primary-light-bg {
+      background: $primary-light;
+    }
+
+    &-primary {
+      color: $primary;
+    }
+
+    &-primary-variant {
+      color: $primary-variant;
+    }
+
+    &-primary-light {
+      color: $primary-light;
+    }
+
+    &-primary-scroll-bar {
+      &::-webkit-scrollbar-thumb {
+        background: $primary;
+      }
+    }
+
+    &-primary-variant-scroll-bar {
+      &::-webkit-scrollbar-thumb {
+        background: $primary-variant;
+      }
+    }
+
+    &-primary-light-scroll-bar {
+      &::-webkit-scrollbar-thumb {
+        background: $primary-light;
+      }
+    }
+
+    &-accent-bg {
+      background: $accent;
+    }
+
+    &-accent-variant-bg {
+      background: $accent-variant;
+    }
+
+    &-accent-light-bg {
+      background: $accent;
+    }
+
+    &-accent {
+      color: $accent;
+    }
+
+    &-accent-variant {
+      color: $accent-variant;
+    }
+
+    &-accent-light {
+      color: $accent;
+    }
+
+    &-accent-scroll-bar {
+      &::-webkit-scrollbar-thumb {
+        background: $accent;
+      }
+    }
+
+    &-accent-variant-scroll-bar {
+      &::-webkit-scrollbar-thumb {
+        background: $accent-variant;
+      }
+    }
+
+    &-accent-light-scroll-bar {
+      &::-webkit-scrollbar-thumb {
+        background: $accent;
+      }
+    }
+
+    &-warn {
+      color: $warn;
+    }
+
+    &-in-active-link {
+      color: $inactive-link-color;
+    }
+
+    &-border {
+      border-color: $border-color;
+    }
+
+    &-txt-variant {
+      color: $txt-variant;
+    }
+
+    &-txt {
+      color: $txt-color;
+    }
+
+    &-txt-0-dot-6 {
+      color: rgba($txt-color, .6);
+    }
+
+    &-txt-0-dot-5 {
+      color: rgba($txt-color, .5);
+    }
+
+    &-txt-0-dot-7 {
+      color: rgba($txt-color, .7);
+    }
+
+    &-txt-0-dot-87 {
+      color: rgba($txt-color, .87);
+    }
+
+  }
+
+}

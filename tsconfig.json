@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "shadow-ng2-lib": [
+        "dist/shadow-ng2-lib"
+      ],
+      "shadow-ng2-lib/*": [
+        "dist/shadow-ng2-lib/*"
+      ]
+    }
   }
 }

@@ -1,0 +1,59 @@
+.sh-auth-welcome {
+
+  &__title {
+    margin: 8px 0;
+    font-weight: 700;
+  }
+
+  &__title_name {
+    color: #c8c5f2
+  }
+
+  &__content {
+    height: 80%;
+    margin-top: 32px;
+
+    &_expr {
+      text-align: center;
+      font-family: cursive;
+    }
+
+    &_welcome-txt {
+      text-align: center;
+      margin-top: 12px
+    }
+
+  }
+
+  &__content-message {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  &__sign-up-link-block {
+    margin-top: 50px
+  }
+
+  &__dont-have-acc {
+    text-align: center;
+    color: #c8c5f2;
+    font-size: 0.85em;
+    font-weight: 700;
+  }
+
+  &__sign-up-btn-block{
+    margin-top: 8px;
+  }
+
+  &__sign-up-btn {
+    width: 150px;
+    height: 38px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    font-weight: lighter;
+    color: white;
+    font-family: monospace
+  }
+
+}

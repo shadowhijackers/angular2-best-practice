@@ -9,8 +9,8 @@
       "projectType": "application",
       "prefix": "app",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "sass"
+        "@ngrx/schematics:component": {
+          "style": "scss"
         }
       },
       "architect": {
@@ -134,7 +134,45 @@
           }
         }
       }
+    },
+    "shadow-ng2-lib": {
+      "root": "projects/shadow-ng2-lib",
+      "sourceRoot": "projects/shadow-ng2-lib/src",
+      "projectType": "library",
+      "prefix": "shadow-hijackers",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/shadow-ng2-lib/tsconfig.lib.json",
+            "project": "projects/shadow-ng2-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/shadow-ng2-lib/src/test.ts",
+            "tsConfig": "projects/shadow-ng2-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/shadow-ng2-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/shadow-ng2-lib/tsconfig.lib.json",
+              "projects/shadow-ng2-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "shadow-ng2"
+  "defaultProject": "shadow-ng2",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

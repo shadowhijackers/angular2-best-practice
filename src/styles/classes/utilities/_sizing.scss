@@ -1,0 +1,25 @@
+.sh-u {
+
+  &-full-width {
+    width: 100%;
+  }
+
+  &-full-height {
+    height: 100%;
+  }
+
+  @each $key, $val in $breakpoints {
+    @include layout-bp($key) {
+
+      &-#{$key}-full-width {
+        width: 100%;
+      }
+
+      &-#{$key}-full-height {
+        height: 100%;
+      }
+
+    }
+  }
+
+}

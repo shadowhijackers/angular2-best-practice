@@ -1,0 +1,30 @@
+@include mat-core($custom-typography);
+
+
+$app-primary: mat-palette($sh-primary-purple, 500);
+$app-accent: mat-palette($sh-light-green-accent, A700);
+$candy-app-theme: mat-light-theme($app-primary, $app-accent);
+$app-warn: mat-palette($mat-deep-orange);
+
+@include angular-material-theme($candy-app-theme);
+@include theme-utilities($candy-app-theme);
+
+// @todo this following code for multiple themes. not yet done
+:root {
+
+  .unicorn-dark-theme {
+
+    $app-primary: mat-palette($mat-blue-grey);
+    $app-accent: mat-palette($mat-amber, A200, A100, A400);
+
+    $app-warn: mat-palette($mat-deep-orange);
+    $dark-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+
+    @include angular-material-theme($dark-theme);
+    @include theme-utilities($dark-theme);
+
+  }
+
+}
+
+

@@ -1,0 +1,20 @@
+@include sh-base-typography-utilities($custom-typography);
+
+@include responsive(tablet) {
+
+  @include sh-base-typography-utilities($custom-typography-sm);
+
+  body {
+    font-size: 13px;
+  }
+
+  .sh-u {
+    @include alignments(2);
+  }
+
+  .app-mt-header {
+    margin-top: 15px !important;
+  }
+
+
+}

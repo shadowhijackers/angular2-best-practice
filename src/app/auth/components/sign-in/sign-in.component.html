@@ -1,0 +1,29 @@
+<form class="sh-auth-sign-in__form" (ngSubmit)="submitForm()">
+  <h1 class="sh-auth-sign-in__title">SIGN IN</h1>
+
+  <div class="sh-auth-sign-in__form-feilds">
+    <div>
+      <mat-form-field class="sh-auth-sign-in__form-feild" appearance="outline" floatLabel="never">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter your email id">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="sh-auth-sign-in__form-feild" appearance="outline" floatLabel="never">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Enter the password">
+      </mat-form-field>
+    </div>
+    <div class="sh-auth-sign-in__other-option" fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-checkbox>Keep logged in</mat-checkbox>
+      <a href="javascript: void(0)" class="sh-auth-sign-in__other-option sh-auth-sign-in__other-option_fp-link">Forgot password?</a>
+    </div>
+  </div>
+
+  <div class="sh-auth-sign-in__submit-block">
+    <button class="sh-auth-sign-in__submit sh-auth-sign-in__submit-block_btn"
+            color="primary"
+            mat-raised-button> Sign in</button>
+  </div>
+
+</form>

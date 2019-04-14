@@ -1,0 +1,13 @@
+<section class="sh-auth__container">
+  <mat-card class="sh-auth__card" fxLayoutAlign="center start" fxLayout>
+
+    <div class="sh-auth__welcome-section" fxFlex="45">
+      <app-welcome></app-welcome>
+    </div>
+
+    <div class="sh-auth__login-form" fxFlex="55">
+      <app-sign-in (submit)="signIn($event)"></app-sign-in>
+    </div>
+
+  </mat-card>
+</section>

@@ -1,0 +1,31 @@
+.sh-u {
+
+  &-clear-float {
+    clear: both;
+  }
+
+  &-float-right {
+    float: right;
+  }
+
+  &-float-left {
+    float: left;
+  }
+
+  @each $key, $val in $breakpoints {
+
+    @include layout-bp($key) {
+      &-clear-#{$key}-float {
+        clear: both;
+      }
+
+      &-float-#{$key}-right {
+        float: right;
+      }
+
+      &-float-#{$key}-left {
+        float: left;
+      }
+    }
+  }
+}
