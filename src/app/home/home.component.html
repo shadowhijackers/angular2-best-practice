@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<home-header (toggleMenu)="sideNav.toggle()"></home-header>
+<nav>
+  <mat-sidenav-container class="sh-home__container" hasBackdrop="false">
+    <mat-sidenav #sideNav class="sh-home__sidenav mat-elevation-z5 sh-theme-bg" mode="side" [opened]="true">
+      <mat-nav-list>
+        <a *ngFor="let data of navDatas" routerLink="." mat-list-item>
+          <mat-icon>{{data.icon}}</mat-icon>
+          <span class="sh-u-m-8 sh-body-2">{{data.name}}</span></a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</nav>

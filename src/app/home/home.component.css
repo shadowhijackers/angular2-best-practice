@@ -1,3 +1,19 @@
-
+.sh-home__container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+.sh-home__sidenav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  min-width: 260px;
+  background-color: #fafafa; }
+.sh-home__sidenav-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0; }
 
 /*# sourceMappingURL=home.component.css.map */

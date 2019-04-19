@@ -16,6 +16,9 @@
   $txt-variant: mat-color($foreground-palate, secondary-text);
   $inactive-link-color: mat-color($foreground-palate, disabled);
   $warn: mat-color($warn-palate);
+  $hover: mat-color($background-palate, hover);
+  $background: mat-color($background-palate, card);
+
 
 
   .sh-theme {
@@ -140,6 +143,17 @@
 
     &-txt-0-dot-87 {
       color: rgba($txt-color, .87);
+    }
+
+    &-hover {
+      &:hover {
+        background: $hover;
+      }
+    }
+
+    &-bg{
+      background: $background;
+      color: $txt-color;
     }
 
   }

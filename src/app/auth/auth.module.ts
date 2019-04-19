@@ -17,8 +17,6 @@ import {AUTH_COMPONENTS} from './components/exports';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
     SharedModule
   ]
 })

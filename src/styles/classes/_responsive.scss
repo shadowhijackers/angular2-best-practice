@@ -1,8 +1,10 @@
 @include sh-base-typography-utilities($custom-typography);
+@include home-module-responsive($sizeMap)
 
 @include responsive(tablet) {
 
   @include sh-base-typography-utilities($custom-typography-sm);
+  @include home-module-responsive($sizeMap-sm);
 
   body {
     font-size: 13px;
@@ -17,4 +19,8 @@
   }
 
 
+}
+
+@include responsive(mobile){
+  @include home-module-responsive($sizeMap-xs);
 }

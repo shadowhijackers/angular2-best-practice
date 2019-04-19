@@ -1,0 +1,26 @@
+
+.sh-home {
+  &__container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__sidenav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    min-width: 260px;
+    background-color: #fafafa;
+  }
+  &__sidenav-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+  }
+}
+
+

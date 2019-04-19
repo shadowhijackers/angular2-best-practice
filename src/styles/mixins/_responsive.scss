@@ -10,5 +10,10 @@ $desktop: desktop;
       @content;
     }
   }
+  @if ($media == $mobile) {
+    @include layout-bp(xs) {
+      @content;
+    }
+  }
 }
 

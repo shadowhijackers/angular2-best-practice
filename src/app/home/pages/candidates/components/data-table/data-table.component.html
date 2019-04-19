@@ -1,3 +1,66 @@
-<h1 class="sh-theme-primary sh-display-4 sh-u-text-align-center sh-u-m-8">
-  Candidates page
-</h1>
+<div class="sh-candidates-data-table__header sh-u-m-6" fxLayout="row" fxLayoutAlign="space-between center">
+  <button class="sh-theme-txt" color="accent" mat-raised-button>Add New Candidate</button>
+  <mat-form-field  class="mat-body-2 sh-candidates-data-table__form-field" floatLabel="never" appearance="outline" fxFlexAlign="end">
+    <mat-label>Search Candidates</mat-label>
+    <input type="text" placeholder="Search candidates" [formControl]="candidateSearchControl" matInput>
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+
+<table class="sh-candidates-data-table__table-container" [dataSource]="datas$" mat-table>
+
+  <ng-container matColumnDef="id">
+    <th *matHeaderCellDef mat-header-cell> Seq No</th>
+    <td *matCellDef="let row"  mat-cell>
+      <span class="sh-u-float-left">{{row.id}}</span>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th *matHeaderCellDef mat-header-cell> Name</th>
+    <td *matCellDef="let row" mat-cell>{{row.name}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="education">
+    <th *matHeaderCellDef mat-header-cell> Education</th>
+    <td *matCellDef="let row" mat-cell>{{row.education}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="experience">
+    <th *matHeaderCellDef mat-header-cell> Experience</th>
+    <td *matCellDef="let row" mat-cell>{{row.experience}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="position">
+    <th *matHeaderCellDef mat-header-cell> Position</th>
+    <td *matCellDef="let row" mat-cell>{{row.position}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="noticePeriod">
+    <th *matHeaderCellDef mat-header-cell> Notice Period</th>
+    <td *matCellDef="let row" mat-cell>{{row.noticePeriod}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="currentSalary">
+    <th *matHeaderCellDef mat-header-cell> Current Salary</th>
+    <td *matCellDef="let row" mat-cell>{{row.currentSalary}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="expectSalary">
+    <th *matHeaderCellDef mat-header-cell> Expect Salary</th>
+    <td *matCellDef="let row" mat-cell>{{row.expectSalary}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="score">
+    <th *matHeaderCellDef mat-header-cell> Interview Score</th>
+    <td *matCellDef="let row" mat-cell>{{row.score}}</td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr class="sh-theme-hover sh-u-cursor-pointer sh-theme-txt-0-dot-7" *matRowDef="let row; columns: displayedColumns" mat-row></tr>
+
+</table>
+<mat-paginator [length]="100"
+               [pageSizeOptions]="[10, 25, 50]"
+               [pageSize]="25"
+></mat-paginator>

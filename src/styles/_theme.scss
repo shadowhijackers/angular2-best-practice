@@ -8,6 +8,7 @@ $app-warn: mat-palette($mat-deep-orange);
 
 @include angular-material-theme($candy-app-theme);
 @include theme-utilities($candy-app-theme);
+@include home-module-theme($candy-app-theme);
 
 // @todo this following code for multiple themes. not yet done
 :root {
@@ -22,6 +23,7 @@ $app-warn: mat-palette($mat-deep-orange);
 
     @include angular-material-theme($dark-theme);
     @include theme-utilities($dark-theme);
+    @include home-module-theme($dark-theme);
 
   }
 

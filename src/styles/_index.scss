@@ -1,8 +1,9 @@
-@import '../../node_modules/@angular/material/theming';
-
+@import '~node_modules/@angular/material/theming';
+@import "layout-common";
 @import "variables";
 @import "mixins/index";
 @import "reboot";
+@import "~src/app/home/home.component";
 @import "classes/index";
 @import 'theme';
 

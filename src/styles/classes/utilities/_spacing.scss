@@ -1,3 +1,28 @@
+@mixin alignments($mediaSizeDivider) {
+
+  @each $prefix, $property in $alignPropertiesMap {
+    @each $key,
+    $size in $alignSizeMap {
+      &-#{$prefix}-#{$key} {
+        #{$property}: $size / $mediaSizeDivider
+      }
+    }
+  }
+
+  @each $prefix, $property in $alignPropertiesMap {
+    @each $position in $aligns {
+      @each $key,
+      $size in $alignSizeMap {
+        &-#{$prefix}#{$position}-#{$key} {
+          #{$property}-#{map-get($alignKeyMap,$position)}: $size / $mediaSizeDivider;
+        }
+      }
+    }
+  }
+
+}
+
+
 .sh-u {
   @include alignments(1);
 }

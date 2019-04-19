@@ -1,0 +1,31 @@
+@mixin home-module-global-styles() {
+
+}
+
+@mixin home-module-responsive($sizeMap) {
+
+  $toolbarHeight: map-get($sizeMap, toolbar-height);
+
+  .sh-home {
+    &__container {
+      top: $toolbarHeight;
+    }
+
+    &__sidenav {
+      top: $toolbarHeight !important;
+    }
+
+    &__sidenav a {
+      height: $toolbarHeight !important;
+    }
+
+    &__sidenav-content {
+      top: $toolbarHeight !important;
+    }
+  }
+
+}
+
+@mixin home-module-theme($theme) {
+
+}
