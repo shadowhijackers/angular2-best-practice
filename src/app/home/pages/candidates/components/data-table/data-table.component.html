@@ -1,6 +1,7 @@
 <div class="sh-candidates-data-table__header sh-u-m-6" fxLayout="row" fxLayoutAlign="space-between center">
   <button class="sh-theme-txt" color="accent" mat-raised-button>Add New Candidate</button>
-  <mat-form-field  class="mat-body-2 sh-candidates-data-table__form-field" floatLabel="never" appearance="outline" fxFlexAlign="end">
+  <mat-form-field class="mat-body-2 sh-candidates-data-table__form-field" floatLabel="never" appearance="outline"
+                  fxFlexAlign="end">
     <mat-label>Search Candidates</mat-label>
     <input type="text" placeholder="Search candidates" [formControl]="candidateSearchControl" matInput>
     <mat-icon matSuffix>search</mat-icon>
@@ -11,7 +12,7 @@
 
   <ng-container matColumnDef="id">
     <th *matHeaderCellDef mat-header-cell> Seq No</th>
-    <td *matCellDef="let row"  mat-cell>
+    <td *matCellDef="let row" mat-cell>
       <span class="sh-u-float-left">{{row.id}}</span>
     </td>
   </ng-container>
@@ -57,7 +58,8 @@
   </ng-container>
 
   <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-  <tr class="sh-theme-hover sh-u-cursor-pointer sh-theme-txt-0-dot-7" *matRowDef="let row; columns: displayedColumns" mat-row></tr>
+  <tr class="sh-theme-hover sh-u-cursor-pointer sh-theme-txt-0-dot-7" *matRowDef="let row; columns: displayedColumns"
+      mat-row></tr>
 
 </table>
 <mat-paginator [length]="100"
