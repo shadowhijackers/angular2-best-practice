@@ -142,7 +142,12 @@
        methods available in javascript itself on nowdays.
     7. Should Know the use of navigator.onLine. its not for online and offline check its for network connected
        or not.
-    6. use angular flexlayout to reduce the amount of scss code. 
-    8. use webpack proxy if you are going to use the build file in same backend server instead seperate
+    6. Use angular flexlayout to reduce the amount of scss code. 
+    8. Use webpack proxy if you are going to use the build file in same backend server instead seperate
       server of frontend. it will avoid add CORS setup in dev server.           
-    9. use MICRO FRONTEND architecture for large project to avoid maintainabilty and deployment problems.                  
+    9. Use MICRO FRONTEND architecture for large project to avoid maintainabilty and deployment problems.   
+    10. Avoid directly manipulating the DOM elements instead of use angular framwork things.                
+
+> Using The best Editor is very important for medium and large level project. I am always use the Jetbrains
+IDE like `webstorm`, `goland` like that. These IDEs are awesome tools to reduce work load.
+
