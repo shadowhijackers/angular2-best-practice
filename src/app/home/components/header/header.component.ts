@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {APPName} from '../../../config';
+
+import {APPName} from '@app/config';
 
 @Component({
   selector: 'home-header',

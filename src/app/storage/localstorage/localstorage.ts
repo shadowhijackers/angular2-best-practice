@@ -12,7 +12,7 @@ export class LocalStorageService {
 
   setItem(key: string, val: string) {
     try {
-      (<any> window).localStorage.setItem(key, val);
+      (window as any).localStorage.setItem(key, val);
     } catch (e) {
       if (!environment.production) {
         // console.log(e);
@@ -23,7 +23,7 @@ export class LocalStorageService {
   getItem(key: string) {
 
     try {
-      return (<any> window).localStorage.getItem(key);
+      return (window as any).localStorage.getItem(key);
 
     } catch (e) {
       if (!environment.production) {

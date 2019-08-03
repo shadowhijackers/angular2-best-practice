@@ -17,9 +17,9 @@ describe('StorageService', () => {
 
   it(`should get the value`, () => {
     storageService.setItem("userName", "Mike", true);
-    let userName = storageService.getItem('userName', true)
+    let userName = storageService.getItem('userName', true);
     expect(userName).toBe('Mike');
-  })
+  });
 
   it(`should return true`, () => {
     expect(storageService.setItem("userName", "Mike")).toBeTruthy();

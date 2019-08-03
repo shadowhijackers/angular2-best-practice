@@ -9,15 +9,16 @@ export class ListLoadingComponent implements OnInit {
 
   @Input() isLoading = false;
   @Input() isDataAvailableInDataSource = false;
-  @Input() message = "Empty data found";
+  @Input() message = 'Empty data found';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   canShowDialogBox() {
-   return !this.isDataAvailableInDataSource || this.isLoading;
+    return !this.isDataAvailableInDataSource || this.isLoading;
   }
 
 

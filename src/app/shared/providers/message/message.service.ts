@@ -62,7 +62,7 @@ export class MessageService {
 
 
   showAlertDialog(msg: string, callBackFunc?: (a) => {}): void {
-    let res = false;
+    const res = false;
     const dialogRef = this.dialog.open(AlertComponent, {
       width: '400px',
       height: '160px',

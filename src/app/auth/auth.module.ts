@@ -4,7 +4,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {AuthRoutingModule} from './auth-routing.module';
 import {AuthComponent} from './auth.component';
-import {SharedModule} from '../shared/shared.module';
+import {SharedModule} from '@shared/shared.module';
 import {ContainerComponent} from './container';
 import {AUTH_COMPONENTS} from './components/exports';
 

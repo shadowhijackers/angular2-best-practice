@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 
 import {CandidatesRoutingModule} from './candidates-routing.module';
 import {CandidatesComponent} from './candidates.component';
-import {SharedModule} from '../../../shared/shared.module';
+import {SharedModule} from '@shared/shared.module';
 import {CANDIDATES_COMPONENTS} from './components/exports';
 import {ListComponent} from './containers';
 

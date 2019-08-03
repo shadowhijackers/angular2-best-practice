@@ -18,7 +18,7 @@ describe('LocalStorageService', () => {
     localStorageService.setItem("userName", "Arjun");
     let userName = localStorageService.getItem("userName");
     expect(userName).toBe("Arjun");
-  })
+  });
 
   it(`should return null when key is not present`, () => {
     let userName = localStorageService.getItem("userNames");

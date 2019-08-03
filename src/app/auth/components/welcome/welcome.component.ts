@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {APPName} from '../../../config';
+import {APPName} from '@app/config';
 
 @Component({
   selector: 'app-welcome',

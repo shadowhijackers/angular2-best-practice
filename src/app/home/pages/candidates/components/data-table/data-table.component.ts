@@ -65,7 +65,7 @@ export class DataTableComponent implements OnInit {
     'score'
   ];
   candidateSearchControl = new FormControl('');
-  
+
   constructor() {
   }
 
