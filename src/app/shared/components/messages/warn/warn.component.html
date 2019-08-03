@@ -1,0 +1,11 @@
+<article class="pr-theme-warn pr-theme-warn-border-1" fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="u-ml-12" fxLayout="row" fxLayoutAlign="start center">
+    <mat-icon class="u-ml-4">error_outline</mat-icon>
+    <h4 style="margin:0;margin-left: 16px" class="u-font-weight-normal">{{message}}</h4>
+  </div>
+  <div class="u-mr-4">
+    <button (click)="cancelHandler()" mat-icon-button>
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+</article>

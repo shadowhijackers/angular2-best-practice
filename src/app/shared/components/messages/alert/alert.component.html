@@ -1,0 +1,11 @@
+<mat-dialog-content >{{data.message}}</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button *ngIf="data.isAlertPopup; else yesOrNo"  id="alert-ok" class="btn btn-danger" (click)="close(true)">Close</button>
+
+  <ng-template #yesOrNo>
+   <button mat-button  id="alert-yes" class="btn btn-success" (click)="close(true)">Yes</button>
+   <button mat-button  id="alert-no" class="btn btn-danger"  (click)="close(false)">No</button>
+ </ng-template>
+
+</mat-dialog-actions>

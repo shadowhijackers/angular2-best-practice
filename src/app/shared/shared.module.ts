@@ -1,11 +1,22 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AngularMaterialModules} from '../angular-material';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
+import {AngularMaterialModules} from '../angular-material';
+import {MESSAGE_COMPONENTS} from './components/messages/exports';
+import {MessageService} from '@shared/providers';
+
+
+export const COMPONENTS = [
+  ...MESSAGE_COMPONENTS
+];
+
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...MESSAGE_COMPONENTS,
+  ],
   imports: [
     CommonModule,
     AngularMaterialModules,
@@ -14,11 +25,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
   ],
   exports: [
+    ...COMPONENTS,
     AngularMaterialModules,
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-  ]
+
+  ],
+  providers: [
+    MessageService
+  ],
 })
 export class SharedModule {
 }

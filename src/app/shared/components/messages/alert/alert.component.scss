@@ -1,0 +1,55 @@
+.mat-dialog-content {
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .mat-dialog-actions {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  mat-dialog-actions .btn-danger {
+    background: #bd2130;
+    outline: none;
+    box-shadow: none
+  }
+  
+  mat-dialog-actions .btn-success {
+    background: #1e7e34
+  }
+  
+  // alert-yes newly added
+  #alert-yes {
+    color: white;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  // alert-no newly addeed
+  #alert-no {
+    color: white;
+    outline: none;
+    box-shadow: none;
+  
+  }
+  
+  #alert-done {
+    color: white;
+    outline: none;
+    box-shadow: none;
+  
+  }
+  
+  .btn-danger {
+    color: white;
+    outline: none;
+    box-shadow: none;
+  
+  }
+  
+  .btn-danger:not(:disabled):not(.disabled):active:focus {
+    box-shadow: none;
+  }
+  

@@ -1,0 +1,16 @@
+.u {
+
+  @each $value in $overflows {
+    &-overflow-#{$value} {
+      overflow: $value;
+    }
+  }
+
+  @each $infix in x, y {
+    @each $value in $overflows {
+      &-overflow-#{$infix}-#{$value} {
+        overflow-#{$infix}: $value;
+      }
+    }
+  }
+}

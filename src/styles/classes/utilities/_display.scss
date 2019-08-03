@@ -1,0 +1,7 @@
+.u-display {
+  @each $val in block, inline, inline-block, flex, none {
+    &-#{$val} {
+      display: $val;
+    }
+  }
+}

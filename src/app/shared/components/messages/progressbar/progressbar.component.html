@@ -1,0 +1,4 @@
+<div fxLayout="row" *ngIf="(progressBarState$ | async)">
+  <mat-progress-bar style="z-index:1001" color="accent" [mode]="'indeterminate'" [value]="20">
+  </mat-progress-bar>
+</div>

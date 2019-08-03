@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "npx compodoc -p src/tsconfig.app.json"
   },
   "private": true,
   "dependencies": {
@@ -29,7 +30,6 @@
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.3.3",
-    "shadow-ng2-lib": "file:dist/shadow-ng2-lib",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
@@ -39,6 +39,8 @@
     "@angular/cli": "~7.3.4",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
+    "@compodoc/compodoc": "^1.1.10",
+    "@fortawesome/fontawesome-free": "^5.10.1",
     "@ngrx/schematics": "^7.4.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",

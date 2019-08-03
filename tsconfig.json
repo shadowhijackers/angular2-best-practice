@@ -19,6 +19,21 @@
       "dom"
     ],
     "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@env/*": [
+        "src/environments/*"
+      ],
+      "@service/*": [
+        "src/app/core/providers/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@storage/*": [
+        "src/app/storage/*"
+      ],
       "shadow-ng2-lib": [
         "dist/shadow-ng2-lib"
       ],

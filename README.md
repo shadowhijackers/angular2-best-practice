@@ -114,6 +114,8 @@
               |-- _layout-common.scss    
           |-- styles.scss   
 
+# Style Guides
+
 ## Angular Style guide
    We are following the __Angular Official__ style guides for maintain the angular **components**, **pipes**, **directive**, 
   **service** and **modules** 
@@ -129,6 +131,49 @@
  be useful to manage the HTML Tags. That contains some cool tips. it will prevent you
  from bad **HTML** Tags styles.
  
+ # Git Commit Message Type following from phase 2 and mile stone 2. 
+ 
+      1. fixed - issue fixed
+      2. feat(scope) - UI design working 
+      3. build - deployment
+      4. chor - other that doesn't affect the test and src code
+      5. perf - performance improvement
+      6. feat(api integration) - API integration
+      7. clean - code clean up
+      8. style - code style like adding semi colon, line space
+      9. beaking change - any breaking change in the code
+     10. refactor - refactor the code
+     11. test - unit testing commits
+    
+ 
+     
+ #### Syntax: 
+      
+    commitType (scope): Subject of the commit (max 52 chars)
+    
+    long Description
+    
+    BREAKING CHANGE: message
+    
+    Closed issue ids
+    
+    
+ #### Example
+ 
+    1. fixed: Multiple request in search criteria page
+       
+       long description
+       
+       BREAKING CHANGE: breaking change
+       
+       Closes  issues  #001, #002   
+    
+    
+    2. feat(design): inprogress: Task and assignment in dashboard
+          
+    3. chor(git commit message rules): Updated readme document
+    
+
 ## Tips
     1. Use NGXS for state management ( before going to use state management frameworks like NGXS, NGRX,REDUX. 
        should know where you have to use this. thats very important thing ).

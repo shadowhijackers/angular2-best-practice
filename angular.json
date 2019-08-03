@@ -29,6 +29,12 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src",
+                "src/styles/mixins"
+              ]
+            },
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -86,6 +92,12 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src",
+                "src/styles/mixins"
+              ]
+            },
             "scripts": [],
             "assets": [
               "src/favicon.ico",

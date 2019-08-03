@@ -1,0 +1,6 @@
+<div *ngIf="canShowDialogBox()" style="height: 250px" fxLayout="column" fxLayoutAlign="center center">
+  <div *ngIf="!isDataAvailableInDataSource && !isLoading">
+    <h4 class="u-font-weight-normal"> {{message}} </h4>
+  </div>
+  <mat-spinner *ngIf="isLoading" [diameter]="35"></mat-spinner>
+</div>

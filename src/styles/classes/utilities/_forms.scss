@@ -1,0 +1,15 @@
+.u {
+
+  &-hide-outline {
+    &:hover, &:active, &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &-no-border{
+    border: 0 !important;
+    outline: 0 !important;
+  }
+
+}

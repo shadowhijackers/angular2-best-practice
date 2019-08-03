@@ -5,6 +5,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NotFoundComponent} from './404';
+import {APPStoreModule} from '@app/store/store.module';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +17,8 @@ import {NotFoundComponent} from './404';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    APPStoreModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
